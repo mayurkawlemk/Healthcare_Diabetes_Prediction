@@ -1,1 +1,1 @@
-web: gunicorn app:appDP
+web: gunicorn appDP:app
