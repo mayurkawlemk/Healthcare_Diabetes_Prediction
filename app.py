@@ -44,28 +44,7 @@ def predict():
     elif request.method=='GET':
         return redirect('/')
 
-"""@app.route('/api')
-def api_help():
-    return render_template('api.html',api_active='active')
 
-@app.route('/api/<int:num_preg>/<int:glucose_conc>/<int:diastolic_bp>/<int:thickness>/<int:insulin>/<float:bmi>/<float:dpf>/<int:age>')
-def api_pred(num_preg,glucose_conc,diastolic_bp,thickness,insulin,bmi,dpf,age):
-    data=np.array([[int(num_preg),int(glucose_conc),int(diastolic_bp),int(thickness),int(insulin),float(bmi),float(dpf),int(age)]])
-    prediction=classifier.predict(data)
-
-    result={
-            'num_preg':num_preg,
-            'glucose_conc':glucose_conc,
-            'diastolic_bp':diastolic_bp,
-            'thickness':thickness,
-            'insulin':insulin,
-            'bmi':bmi,
-            'dpf':dpf,
-            'age':age,
-            'pred':bool(prediction[0])
-        }
-
-    return jsonify(result)"""
 
 if __name__ == '__main__':
 	app.run(debug=True)
